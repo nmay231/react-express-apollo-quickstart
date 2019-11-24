@@ -1,0 +1,25 @@
+# @format
+
+# Run `$ npm run generate` to update the types file
+
+type Query {
+    hello: String!
+    echo(input: String!): String!
+    test: TestObject!
+    isPrettyCool: Boolean!
+    me: User
+}
+
+type Mutation {
+    doSomethingWith(something: String!): String
+}
+
+type TestObject {
+    usefulness: Int!
+    needed: Boolean!
+}
+
+type User {
+    id: ID!
+    role: String!
+}

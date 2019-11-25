@@ -20,7 +20,7 @@ const serverConfig: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: /.ts$/,
+                test: /\.ts$/,
                 loader: 'ts-loader',
                 options: {
                     configFile: resolve('config/tsconfig.server.json'),
@@ -49,11 +49,15 @@ const clientConfig: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: /.tsx?$/,
+                test: /\.tsx?$/,
                 loader: 'ts-loader',
                 options: {
                     configFile: resolve('config/tsconfig.client.json'),
                 },
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
         ],
     },

@@ -23,7 +23,7 @@ const Query: QueryResolvers = {
 
 const Mutation: MutationResolvers = {
     doSomethingWith: (root, { something }) =>
-        `Totally updated the database for ${something}...`,
+        `Totally updated the database with ${something}...`,
 }
 
 // To update individual fields for type User

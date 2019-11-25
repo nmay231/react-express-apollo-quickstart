@@ -3,17 +3,14 @@
 import React from 'react'
 
 import GraphqlTest from './components/GraphqlTest'
+import GraphQLButton from './components/GraphQLButton'
 
-interface IAppProps {
-    prefix: string
-}
-
-const App: React.FC<IAppProps> = ({ prefix }) => {
+const App: React.FC = () => {
     return (
         <div>
-            <h1>
-                {prefix}
-                <GraphqlTest />
+            <h1 className="mt-5">
+                Hello <GraphqlTest />
+                <GraphQLButton />
             </h1>
         </div>
     )

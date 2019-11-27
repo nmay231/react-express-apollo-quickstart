@@ -2,6 +2,8 @@
 
 overwrite: true
 schema: './src/graphql/schema.graphql'
+# Or you pass a list of graphql documents
+# documents: './src/graphql/documents/**/*'
 generates:
     ./src/graphql/schema.ts:
         plugins:

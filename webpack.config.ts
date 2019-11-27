@@ -79,14 +79,14 @@ const clientConfig: webpack.Configuration = {
               proxy: { '/api': 'http://localhost:4000' },
           }
         : undefined,
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all',
-    //         minSize: 10000,
-    //         maxAsyncRequests: 10,
-    //         maxInitialRequests: 4,
-    //     },
-    // },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            minSize: 10000,
+            maxAsyncRequests: 10,
+            maxInitialRequests: 4,
+        },
+    },
 }
 
 export default [serverConfig, clientConfig]

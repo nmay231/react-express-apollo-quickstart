@@ -1,6 +1,10 @@
-config/.env
+# Dependencies and auto-generated
 node_modules
-dist/server.bundle.js
+dist/**/*.bundle.js
+public/js/**/*.bundle.js
 
-public/js/
+# Confidential
+config/.env
+
+# Logs
 *-error.log

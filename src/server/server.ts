@@ -2,6 +2,7 @@
 
 import express from 'express'
 import path from 'path'
+import helmet from 'helmet'
 
 import './loadEnvironment'
 
@@ -9,6 +10,7 @@ import routers from './routes'
 import { graphqlServer } from './graphql'
 
 const app = express()
+app.use(helmet())
 
 app.use(routers)
 

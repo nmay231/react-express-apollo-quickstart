@@ -1,18 +1,23 @@
 /** @format */
 
 import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import GraphqlTest from './components/GraphqlTest'
-import GraphQLButton from './components/GraphQLButton'
+import HomePage from './pages/HomePage'
 
 const App: React.FC = () => {
     return (
-        <div>
-            <h1 className="mt-5">
-                Hello <GraphqlTest />
-                <GraphQLButton />
-            </h1>
-        </div>
+        <Router>
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route
+                    path="*"
+                    component={() => (
+                        <h1 className="mt-5">404! Page not found</h1>
+                    )}
+                />
+            </Switch>
+        </Router>
     )
 }
 

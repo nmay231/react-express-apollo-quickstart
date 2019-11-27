@@ -2,6 +2,7 @@
 node_modules
 dist/**/*.bundle.js
 public/js/**/*.bundle.js
+src/graphql/schema.ts
 
 # Confidential
 config/.env

@@ -2,6 +2,7 @@
 
 import path from 'path'
 import webpack from 'webpack'
+import NodeExternals from 'webpack-node-externals'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -30,6 +31,7 @@ const serverConfig: webpack.Configuration = {
     },
     resolve: { extensions: ['.mjs', '.ts', '.js'] },
     target: 'node',
+    externals: [NodeExternals()],
     node: false,
     devtool: 'cheap-eval-source-map',
 }

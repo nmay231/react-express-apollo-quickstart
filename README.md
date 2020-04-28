@@ -10,11 +10,13 @@ $ npm install
 
 # Running
 
-You can get up and running with `npm run dev`.
+You can get up and running with `npm run dev` and by visiting `http://localhost:4000`.
 
-Or use sweet hot-reloading running `npm run client` and `npm run server` in separate terminals.
+Or use sweet hot-reloading by running `npm run client` and `npm run server` in separate terminals. Go to `http://localhost:3000`.
 
-Deploying to Heroku works automatically with `npm run build` then `npm start`.
+Note: When using `run dev`, the api and client listens to port 4000 (with webpack-dev-server). Hot reloading has the api server listening to 4000 but the client server listens to 3000.
+
+Deployment works with a simple `npm run build` then `npm start`.
 
 ## Other scripts
 

@@ -8,11 +8,11 @@ import { resolvers } from './resolvers'
 export const graphqlServer = new ApolloServer({
     typeDefs: importSchema('src/graphql/schema.graphql'),
     resolvers,
+    // Remove stacktrace in production
+    debug: process.env.NODE_ENV !== 'production',
     formatError(err) {
-        // Remove stacktrace in production
-        if (process.env.NODE_ENV === 'production') {
-            err.extensions.exception = undefined
-        }
+        // Optionally log/rewrite errors
+	console.error(err)
         return err
     },
     context({ req }) {
